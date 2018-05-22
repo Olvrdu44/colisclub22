@@ -19,6 +19,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
+		alert("ok");
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
 		var onSuccess = function(position) {
 			alert('Latitude: '          + position.coords.latitude          + '\n' +
@@ -48,7 +49,7 @@ var app = {
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
 		
-			
+			alert("oups");
     },
 
     // Update DOM on a Received Event
@@ -61,6 +62,8 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+		
+		alert("la");
     }
 };
 
