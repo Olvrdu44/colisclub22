@@ -20,16 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-		
-			var onSuccess = function(position) {
+		var onSuccess = function(position) {
 			alert('Latitude: '          + position.coords.latitude          + '\n' +
 				  'Longitude: '         + position.coords.longitude         + '\n' +
 				  'Altitude: '          + position.coords.altitude          + '\n' +
@@ -48,6 +39,16 @@ var app = {
 		}
 
 		navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    },
+
+    // deviceready Event Handler
+    //
+    // Bind any cordova events here. Common events are:
+    // 'pause', 'resume', etc.
+    onDeviceReady: function() {
+        this.receivedEvent('deviceready');
+		
+			
     },
 
     // Update DOM on a Received Event
