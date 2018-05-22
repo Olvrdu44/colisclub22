@@ -20,6 +20,26 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+		
+		var onSuccess = function(position) {
+			alert('Latitude: '          + position.coords.latitude          + '\n' +
+				  'Longitude: '         + position.coords.longitude         + '\n' +
+				  'Altitude: '          + position.coords.altitude          + '\n' +
+				  'Accuracy: '          + position.coords.accuracy          + '\n' +
+				  'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+				  'Heading: '           + position.coords.heading           + '\n' +
+				  'Speed: '             + position.coords.speed             + '\n' +
+				  'Timestamp: '         + position.timestamp                + '\n');
+		};
+
+		// onError Callback receives a PositionError object
+		//
+		function onError(error) {
+			alert('code: '    + error.code    + '\n' +
+				  'message: ' + error.message + '\n');
+		}
+		
+		navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge:60000, timeout:5000, enableHighAccuracy:true} );
     },
 
     // deviceready Event Handler
@@ -40,27 +60,8 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-
-		navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge:60000, timeout:5000, enableHighAccuracy:true} );
     }
 };
 
 app.initialize();
 
-var onSuccess = function(position) {
-	alert('Latitude: '          + position.coords.latitude          + '\n' +
-		  'Longitude: '         + position.coords.longitude         + '\n' +
-		  'Altitude: '          + position.coords.altitude          + '\n' +
-		  'Accuracy: '          + position.coords.accuracy          + '\n' +
-		  'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-		  'Heading: '           + position.coords.heading           + '\n' +
-		  'Speed: '             + position.coords.speed             + '\n' +
-		  'Timestamp: '         + position.timestamp                + '\n');
-};
-
-// onError Callback receives a PositionError object
-//
-function onError(error) {
-	alert('code: '    + error.code    + '\n' +
-		  'message: ' + error.message + '\n');
-}
