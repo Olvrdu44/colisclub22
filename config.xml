@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.rainetcom.colisclub" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+	<gap:plugin name="cordova-plugin-android-permissions" source="npm" version="0.10.0" />
     <name>ColisClub</name>
     <description>
        L'application ColisClub uniquement pour les coursiers
@@ -36,5 +37,9 @@
     </plugin>
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
-    <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.1" >
+		<edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+			<string>need location access to find things nearby</string>
+		</edit-config>
+	</plugin>
 </widget>
