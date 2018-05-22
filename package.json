@@ -1,0 +1,43 @@
+{
+  "name": "com.rainetcom.colisclub",
+  "displayName": "ColisClub",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cordova-android": "^7.0.0",
+    "cordova-ios": "^4.5.4",
+    "cordova-plugin-camera": "^4.0.3",
+    "cordova-plugin-dialogs": "^2.0.1",
+    "cordova-plugin-geolocation": "^4.0.1",
+    "cordova-plugin-inappbrowser": "^3.0.0",
+    "cordova-plugin-network-information": "^2.0.1",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-whitelist": "^1.3.3"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "L'application colis club souhaite accéder a votre position afin de vous géolocaliser pour permettre le suivi des livraisons et donner votre position a l'administrateur colisclub"
+      },
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-camera": {
+        "CAMERA_USAGE_DESCRIPTION": "L'application ColisClub aimerait accéder a votre caméra pour vous permattre de changer de photo de profil",
+        "PHOTOLIBRARY_USAGE_DESCRIPTION": "L'application ColisClub aimerait accéder a vos photos pour vous permettre de choisir une photo de profil"
+      },
+      "cordova-plugin-splashscreen": {}
+    },
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
+}
