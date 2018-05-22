@@ -26,12 +26,10 @@
   "cordova-plugin-geolocation": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-geolocation@4.0.1"
+      "id": "cordova-plugin-geolocation@^4.0.1"
     },
     "is_top_level": true,
-    "variables": {
-      "GEOLOCATION_USAGE_DESCRIPTION": "L'application colis club souhaite accéder a votre position afin de vous géolocaliser pour permettre le suivi des livraisons et donner votre position a l'administrateur colisclub"
-    }
+    "variables": {}
   },
   "cordova-plugin-inappbrowser": {
     "source": {

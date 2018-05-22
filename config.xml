@@ -27,13 +27,13 @@
     <engine name="android" spec="~7.0.0" />
     <plugin name="cordova-plugin-dialogs" spec="^2.0.1" />
     <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
-    <plugin name="cordova-plugin-geolocation" spec="^4.0.1">
-        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="L'application colis club souhaite accéder a votre position afin de vous géolocaliser pour permettre le suivi des livraisons et donner votre position a l'administrateur colisclub" />
-    </plugin>
     <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
     <plugin name="cordova-plugin-camera" spec="^4.0.3">
         <variable name="CAMERA_USAGE_DESCRIPTION" value="L'application ColisClub aimerait accéder a votre caméra pour vous permattre de changer de photo de profil" />
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="L'application ColisClub aimerait accéder a vos photos pour vous permettre de choisir une photo de profil" />
     </plugin>
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.1">
+        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="L'application colis club souhaite accéder a votre position afin de vous géolocaliser pour permettre le suivi des livraisons et donner votre position a l'administrateur colisclub" />
+    </plugin>
 </widget>
